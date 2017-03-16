@@ -1,9 +1,10 @@
-# OpenShift Nginx PHP 7 Cartridge
-Nginx 1.9 with PHP 7.0 on OpenShift.
+# OpenShift Nginx PHP 7 phpservermon 3.11 Cartridge
+Nginx 1.9 with PHP 7.0 phpservermon  on OpenShift.
 
 * Nginx: 1.11.6
 * PHP: 7.0.13
 * Composer: 1.2.4
+* phpservermon: 3.11
 
 ## Installation
 
