@@ -19,3 +19,7 @@ Alternatively, you can use this [cartridge definition](http://cartreflect-clayto
 https://github.com/pinodex/openshift-cartridge-nginx-php7
 ```
 
+### Create 
+```
+rhc app create phpservermon  http://cartreflect-claytondev.rhcloud.com/github/chio-nzgft/openshift-nginx-php7-phpservermon
+```
