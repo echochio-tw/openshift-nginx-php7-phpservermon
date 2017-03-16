@@ -14,7 +14,7 @@ function create_dirs() {
 function start() {
     create_dirs
     build_config
-    if [ ! -f $OPENSHIFT_REPO_DIR/dbok ] 
+    if [ ! -f $OPENSHIFT_REPO_DIR/dbok ]; then
      sed -i 's/db_user/'$(echo $OPENSHIFT_MYSQL_DB_USERNAME)'/g' $OPENSHIFT_REPO_DIR/www/config.php
      sed -i 's/db_pass/'$(echo $OPENSHIFT_MYSQL_DB_PASSWORD)'/g' $OPENSHIFT_REPO_DIR/www/config.php
      sed -i 's/localhost/'$(echo $OPENSHIFT_MYSQL_DB_HOST)'/g' $OPENSHIFT_REPO_DIR/www/config.php
