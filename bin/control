@@ -14,6 +14,14 @@ function create_dirs() {
 function start() {
     create_dirs
     build_config
+    if [ ! -f $OPENSHIFT_REPO_DIR/dbok ] 
+     sed -i 's/db_user/'$(echo $OPENSHIFT_MYSQL_DB_USERNAME)'/g' $OPENSHIFT_REPO_DIR/www/config.php
+     sed -i 's/db_pass/'$(echo $OPENSHIFT_MYSQL_DB_PASSWORD)'/g' $OPENSHIFT_REPO_DIR/www/config.php
+     sed -i 's/localhost/'$(echo $OPENSHIFT_MYSQL_DB_HOST)'/g' $OPENSHIFT_REPO_DIR/www/config.php
+     sed -i 's/db_name/server/g' $OPENSHIFT_REPO_DIR/www/config.php
+     sed -i 's/;dbname/port='$(echo $OPENSHIFT_MYSQL_DB_PORT)';dbname/g' $OPENSHIFT_REPO_DIR/www/src/psm/Service/Database.class.php
+     touch $OPENSHIFT_REPO_DIR/dbok
+    fi
 
     service php-fpm start
     service nginx start
