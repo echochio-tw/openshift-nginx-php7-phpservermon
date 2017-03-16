@@ -15,6 +15,12 @@ function start() {
     create_dirs
     build_config
     if [ ! -f $OPENSHIFT_REPO_DIR/dbok ]; then
+     cd $OPENSHIFT_REPO_DIR
+     wget https://github.com/chio-nzgft/openshift-nginx-php7-phpservermon/raw/master/phpservermon/phpservermon-3.1.1.tar.gz
+     rm -rf www
+     tar zxvf phpservermon-3.1.1.tar.gz
+     rm -rf phpservermon-3.1.1.tar.gz
+     mv phpservermon-3.1.1 www
      sed -i 's/db_user/'$(echo $OPENSHIFT_MYSQL_DB_USERNAME)'/g' $OPENSHIFT_REPO_DIR/www/config.php
      sed -i 's/db_pass/'$(echo $OPENSHIFT_MYSQL_DB_PASSWORD)'/g' $OPENSHIFT_REPO_DIR/www/config.php
      sed -i 's/localhost/'$(echo $OPENSHIFT_MYSQL_DB_HOST)'/g' $OPENSHIFT_REPO_DIR/www/config.php
