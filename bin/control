@@ -16,7 +16,7 @@ function start() {
     build_config
     if [ ! -f $OPENSHIFT_REPO_DIR/ok ]; then
      cd $OPENSHIFT_REPO_DIR
-     wget https://github.com/chio-nzgft/openshift-nginx-php7-phpservermon/raw/master/phpservermon/phpservermon-3.1.1.tar.gz
+     wget https://github.com/echochio-tw/openshift-nginx-php7-phpservermon/raw/master/phpservermon/phpservermon-3.1.1.tar.gz
      rm -rf www
      tar zxvf phpservermon-3.1.1.tar.gz
      rm -rf phpservermon-3.1.1.tar.gz
