@@ -14,7 +14,7 @@ Nginx 1.9 with PHP 7.0 phpservermon  on OpenShift.
 Alternatively, you can use this [cartridge definition](http://cartreflect-claytondev.rhcloud.com/github/pinodex/openshift-cartridge-nginx-php7) on application creation page.
 
 
-### Base BY : 
+### Base : 
 ```
 https://github.com/pinodex/openshift-cartridge-nginx-php7
 ```
